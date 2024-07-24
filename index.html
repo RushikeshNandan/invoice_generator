@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="invoice">
+        <header>
+            <img src="logo-placeholder.png" alt="Company Logo" id="logo">
+            <h1>Invoice</h1>
+        </header>
+        <section id="seller-details">
+            <p id="seller-name"></p>
+            <p id="seller-address"></p>
+            <p id="seller-pan"></p>
+            <p id="seller-gst"></p>
+        </section>
+        <section id="billing-details">
+            <h2>Billing Details</h2>
+            <p id="billing-name"></p>
+            <p id="billing-address"></p>
+            <p id="billing-code"></p>
+        </section>
+        <section id="shipping-details">
+            <h2>Shipping Details</h2>
+            <p id="shipping-name"></p>
+            <p id="shipping-address"></p>
+            <p id="shipping-code"></p>
+        </section>
+        <section id="order-details">
+            <p>Order No: <span id="order-no"></span></p>
+            <p>Order Date: <span id="order-date"></span></p>
+        </section>
+        <section id="invoice-details">
+            <p>Invoice No: <span id="invoice-no"></span></p>
+            <p>Invoice Date: <span id="invoice-date"></span></p>
+        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Discount</th>
+                    <th>Net Amount</th>
+                    <th>Tax Type</th>
+                    <th>Tax Amount</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody id="items">
+                <!-- Items will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <footer>
+            <p>Total Amount: <span id="total-amount"></span></p>
+            <p>Amount in Words: <span id="amount-words"></span></p>
+            <p>Reverse Charge: <span id="reverse-charge"></span></p>
+            <div id="signature">
+                <img src="signature.png" alt="Signature">
+                <p>Authorised Signatory</p>
+            </div>
+        </footer>
+    </div>
+    <button id="generate-pdf">Generate PDF</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
